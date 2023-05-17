@@ -20,7 +20,8 @@ export const NavbarListItem = styled.li`
   font-size: 30px;
 `
 
-export const Title = styled.h1`
+export const Title = styled(Link)`
+  text-decoration: none;
   font-size: 55px;
   color: #003AB9;
 `;
