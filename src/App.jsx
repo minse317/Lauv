@@ -1,4 +1,3 @@
-import React from 'react';  // eslint-disable-line no-unused-vars
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './components/navbar/NavBar';
 import Routes from './Routes';
@@ -12,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
