@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {faPlay, faForward} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const BoxContainer = styled.div`
   display: flex;
@@ -24,4 +23,26 @@ export const Ig = styled.div `
   width: 180px;
   height: 180px;
   margin: 15px;
+`
+export const LeftContainer = styled.div`
+  flex-direction: column;
+  display: flex;
+  justify-content : center;
+`
+
+export const IconContainer = styled.div`
+  margin: auto;
+`
+export const LeftIcon = styled(FontAwesomeIcon)`
+  transform: scaleX(-1);
+  margin-right: 15px;
+`
+
+export const CenterIcon = styled(FontAwesomeIcon)`
+  margin-right: 15px;
+  font-size: 20px;
+`
+
+export const RightIcon = styled(FontAwesomeIcon)`
+
 `
