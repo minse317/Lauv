@@ -8,7 +8,7 @@ function App() {
       <NavBar />
       <Routes />
     </Router>
-  )
+  );
 }
 
 export default App;

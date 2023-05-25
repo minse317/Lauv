@@ -6,11 +6,11 @@ import Song from './page/song/Song';
 const Routes = () => {
   return (
     <RouteList>
-      <Route exact path='/' element={<Home />} />
-      <Route exact path='/about' element={<About />} />
-      <Route exact path='/song' element={<Song />} />
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/about" element={<About />} />
+      <Route exact path="/song" element={<Song />} />
     </RouteList>
-  )
-}
+  );
+};
 
 export default Routes;

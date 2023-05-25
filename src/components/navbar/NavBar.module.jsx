@@ -7,27 +7,27 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  padding: 30px; 
+  padding: 30px;
 `;
 
 export const NavbarList = styled.ul`
-  list-style:none;
-`
+  list-style: none;
+`;
 
 export const NavbarListItem = styled.li`
   text-decoration: none;
   float: left;
   font-size: 30px;
-`
+`;
 
 export const Title = styled(Link)`
   text-decoration: none;
   font-size: 55px;
-  color: #003AB9;
+  color: #003ab9;
 `;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
   margin-right: 25px;
-`
+`;
