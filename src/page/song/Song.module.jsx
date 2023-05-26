@@ -10,7 +10,7 @@ export const BoxContainer = styled.div`
 export const Box = styled.div`
   width: 650px;
   height: 300px;
-  border: 0.1px solid lightgray;
+  /* border: 0.1px solid lightgray; */
   border-radius: 15px;
   box-shadow: 5px 5px 5px lightgray;
   display: flex;
@@ -18,37 +18,44 @@ export const Box = styled.div`
   margin: 50px;
 
   h1 {
+    font-size: 18px;
+    color: #444444;
+    margin-top: 0;
+  }
+
+  h2 {
     font-size: 20px;
   }
 `;
 
-export const Ig = styled.img`
+export const Image = styled.img`
   width: 200px;
   height: 200px;
   margin: 15px;
 `;
-export const LeftContainer = styled.div`
+
+export const RightContainer = styled.div`
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  text-align: left;
 `;
 
 export const IconContainer = styled.div`
-  margin: auto;
-  margin-top: 10px;
+  margin-top: 80px;
+  margin-left: 85px;
 `;
 
 export const LeftIcon = styled(FontAwesomeIcon)`
   transform: scaleX(-1);
-  margin-right: 15px;
-  font-size: 20px;
-`;
-
-export const CenterIcon = styled(FontAwesomeIcon)`
-  margin-right: 15px;
+  margin-right: 30px;
   font-size: 25px;
 `;
 
+export const CenterIcon = styled(FontAwesomeIcon)`
+  margin-right: 30px;
+  font-size: 30px;
+`;
+
 export const RightIcon = styled(FontAwesomeIcon)`
-  font-size: 20px;
+  font-size: 25px;
 `;

@@ -8,8 +8,8 @@ const Song = () => {
 
   useEffect(() => {
     const getLauvAlbums = async () => {
-      const clientId = '';
-      const clientSecret = '';
+      const clientId = 'a229f902b30f4479b776347a37bb4620';
+      const clientSecret = '1751ae56d1c14a4aa4fce4a2e955a635';
       const accessToken = await getAccessToken(clientId, clientSecret);
       const lauvAlbums = await fetchLauvAlbums(accessToken);
       setAlbums(lauvAlbums);
@@ -47,15 +47,16 @@ const Song = () => {
     <S.BoxContainer>
       {albums.map(album => (
         <S.Box key={album.id}>
-          <S.LeftContainer>
-            <S.Ig src={album.images[0].url} alt={album.name} />
+          <S.Image src={album.images[0].url} alt={album.name} />
+          <S.RightContainer>
+            <h2>{album.name}</h2>
+            <h1>{album.artists.map(artist => artist.name).join(', ')}</h1>
             <S.IconContainer>
               <S.LeftIcon icon={faForward} />
               <S.CenterIcon icon={faPlay} />
               <S.RightIcon icon={faForward} />
             </S.IconContainer>
-          </S.LeftContainer>
-          <h1>{album.name}</h1>
+          </S.RightContainer>
         </S.Box>
       ))}
     </S.BoxContainer>
