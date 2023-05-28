@@ -16,6 +16,7 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   margin: 50px;
+  transition: transform 0.3s ease;
 
   h1 {
     font-size: 18px;
@@ -24,7 +25,11 @@ export const Box = styled.div`
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
   }
 `;
 

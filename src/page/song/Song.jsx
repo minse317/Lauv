@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import * as S from './Song.module';
 import { faPlay, faForward } from '@fortawesome/free-solid-svg-icons';
+import { getAccessToken, fetchLauvAlbums } from '../../api/Api';
 
 const Song = () => {
   const [albums, setAlbums] = useState([]);
@@ -16,32 +16,6 @@ const Song = () => {
     };
     getLauvAlbums();
   }, []);
-
-  const getAccessToken = async (clientId, clientSecret) => {
-    const response = await axios.post(
-      'https://accounts.spotify.com/api/token',
-      'grant_type=client_credentials',
-      {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          Authorization: 'Basic ' + btoa(clientId + ':' + clientSecret),
-        },
-      }
-    );
-    return response.data.access_token;
-  };
-
-  const fetchLauvAlbums = async accessToken => {
-    const response = await axios.get(
-      'https://api.spotify.com/v1/search?q=lauv&type=album',
-      {
-        headers: {
-          Authorization: 'Bearer ' + accessToken,
-        },
-      }
-    );
-    return response.data.albums.items;
-  };
 
   return (
     <S.BoxContainer>
