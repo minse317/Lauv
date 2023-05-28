@@ -12,7 +12,7 @@ export const Box = styled.div`
   height: 300px;
   /* border: 0.1px solid lightgray; */
   border-radius: 15px;
-  box-shadow: 5px 5px 5px lightgray;
+  box-shadow: 5px 5px 5px 5px lightgray;
   display: flex;
   align-items: center;
   margin: 50px;
