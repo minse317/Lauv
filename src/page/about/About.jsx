@@ -17,7 +17,6 @@ const Song = () => {
         console.error(error);
       }
     };
-
     fetchData();
   }, []);
 
@@ -26,8 +25,8 @@ const Song = () => {
       {artistInfo ? (
         <div>
           <img src={artistInfo.images[0].url} />
-          <p>이름: {artistInfo.name}</p>
-          <p>장르: {artistInfo.genres}</p>
+          <p>{artistInfo.name}</p>
+          <p>{artistInfo.genres}</p>
         </div>
       ) : (
         <p>Loading artist information...</p>

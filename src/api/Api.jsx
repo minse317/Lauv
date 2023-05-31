@@ -14,16 +14,16 @@ const getAccessToken = async (clientId, clientSecret) => {
   return response.data.access_token;
 };
 
-const fetchLauvAlbums = async accessToken => {
+const fetchAlbums = async (accessToken, artistId) => {
   const response = await axios.get(
-    'https://api.spotify.com/v1/search?q=lauv&type=album',
+    `https://api.spotify.com/v1/artists/${artistId}/albums`,
     {
       headers: {
-        Authorization: 'Bearer ' + accessToken,
+        Authorization: `Bearer ${accessToken}`,
       },
     }
   );
-  return response.data.albums.items;
+  return response.data.items;
 };
 
 const fetchArtistInfo = async (artistId, accessToken) => {
@@ -38,4 +38,16 @@ const fetchArtistInfo = async (artistId, accessToken) => {
   return response.data;
 };
 
-export { getAccessToken, fetchLauvAlbums, fetchArtistInfo };
+const fetchAlbumList = async (accessToken, albumId) => {
+  const response = await axios.get(
+    `https://api.spotify.com/v1/albums/${albumId}/tracks`,
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    }
+  );
+  return response.data.items;
+};
+
+export { getAccessToken, fetchAlbums, fetchArtistInfo, fetchAlbumList };
