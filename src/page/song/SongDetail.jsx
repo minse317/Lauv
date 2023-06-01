@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getAccessToken, fetchAlbums, fetchAlbumList } from '../../api/Api';
+import {
+  getAccessToken,
+  fetchAlbums,
+  fetchAlbumList,
+  fetchArtistInfo,
+} from '../../api/Api';
+import * as S from './Song.module';
 
 const SongDetail = () => {
   const { albumId } = useParams();
   const [album, setAlbum] = useState(null);
   const [tracks, setTracks] = useState([]);
+  const [artist, setArtist] = useState(null);
 
   useEffect(() => {
     const getAlbumData = async () => {
@@ -22,24 +29,35 @@ const SongDetail = () => {
       /* 앨범 트랙 목록 가져오기 */
       const albumTracks = await fetchAlbumList(accessToken, albumId);
       setTracks(albumTracks);
+
+      /* 아티스트 정보 가져오기 */
+      const artistInfo = await fetchArtistInfo(artistId, accessToken);
+      setArtist(artistInfo);
     };
     getAlbumData();
   }, [albumId]);
 
-  if (!album) {
+  if (!album || !artist) {
     return <div>Loading...</div>;
   }
 
   return (
     <div>
-      {album.images && album.images.length > 0 && (
-        <img src={album.images[0].url} alt={album.name} />
-      )}
-      <ul>
-        {tracks.map(track => (
-          <li key={track.id}>{track.name}</li>
-        ))}
-      </ul>
+      <S.TrackListMainContainer>
+        <S.TrackListContainer>
+          {album.images && album.images.length > 0 && (
+            <img src={album.images[0].url} alt={album.name} />
+          )}
+          <h2>{album.name}</h2>
+
+          {tracks.map(track => (
+            <S.Music key={track.name}>
+              <h3 key={track.id}>{track.name}</h3>
+              <h4 key={track.id}>{artist.name}</h4>
+            </S.Music>
+          ))}
+        </S.TrackListContainer>
+      </S.TrackListMainContainer>
     </div>
   );
 };

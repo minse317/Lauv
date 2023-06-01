@@ -71,3 +71,42 @@ export const StyledLink = styled(Link)`
   color: black;
   margin-right: 25px;
 `;
+
+export const TrackListMainContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const TrackListContainer = styled.div`
+  width: 650px;
+  /* border: 1px solid;
+  border-radius: 5px; */
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin: 0;
+    width: 450px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  }
+`;
+
+export const Music = styled.div`
+  border: 1px solid lightgray;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 5px;
+
+  h3 {
+    font-size: 18px;
+    margin: 2px;
+  }
+  h4 {
+    font-size: 16px;
+    color: #2e2e2e;
+    margin: 2px;
+  }
+`;
