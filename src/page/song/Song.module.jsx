@@ -79,26 +79,39 @@ export const TrackListMainContainer = styled.div`
 
 export const TrackListContainer = styled.div`
   width: 650px;
-  /* border: 1px solid;
-  border-radius: 5px; */
+  -webkit-box-shadow: 5px 5px 50px 0px lightgray;
+  -moz-box-shadow: 5px 5px 50px 0px lightgray;
+  box-shadow: 5px 5px 50px 0px lightgray;
+  border-radius: 10px;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  h1 {
+    font-size: 35px;
+  }
 
   img {
     margin: 0;
     width: 450px;
     border-radius: 50%;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
   }
 `;
 
 export const Music = styled.div`
-  border: 1px solid lightgray;
-  width: 100%;
-  border-collapse: collapse;
+  width: 640px;
   padding: 5px;
+  border: 0.5px solid lightgray;
+  box-shadow: 0 0 0 0.5px lightgray;
+
+  &:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: none;
+  }
 
   h3 {
     font-size: 18px;

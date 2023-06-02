@@ -45,10 +45,10 @@ const SongDetail = () => {
     <div>
       <S.TrackListMainContainer>
         <S.TrackListContainer>
+          <h1>{album.name}</h1>
           {album.images && album.images.length > 0 && (
             <img src={album.images[0].url} alt={album.name} />
           )}
-          <h2>{album.name}</h2>
 
           {tracks.map(track => (
             <S.Music key={track.name}>
