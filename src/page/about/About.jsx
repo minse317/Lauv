@@ -33,13 +33,22 @@ const Song = () => {
             <img src={artistInfo.images[0].url} />
             <h2>August 8, 1994</h2>
             <S.IconWrapper>
-              <S.LinkSns to="https://www.instagram.com/lauvsongs/">
+              <S.LinkSns
+                to="https://www.instagram.com/lauvsongs/"
+                target="_blank"
+              >
                 <InstagramIcon style={{ fontSize: 40, marginRight: 15 }} />
               </S.LinkSns>
-              <S.LinkSns to="https://www.facebook.com/lauvsongs/">
+              <S.LinkSns
+                to="https://www.facebook.com/lauvsongs/"
+                target="_blank"
+              >
                 <FacebookIcon style={{ fontSize: 40, marginRight: 15 }} />
               </S.LinkSns>
-              <S.LinkSns to="https://www.youtube.com/channel/UCfLdIEPs1tYj4ieEdJnyNyw">
+              <S.LinkSns
+                to="https://www.youtube.com/channel/UCfLdIEPs1tYj4ieEdJnyNyw"
+                target="_blank"
+              >
                 <YouTubeIcon style={{ fontSize: 40 }} />
               </S.LinkSns>
             </S.IconWrapper>

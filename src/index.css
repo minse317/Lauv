@@ -1,8 +1,12 @@
-body {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+body::-webkit-scrollbar {
+  width: 12px;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+body::-webkit-scrollbar-thumb {
+  background: #89aeff;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
 }
