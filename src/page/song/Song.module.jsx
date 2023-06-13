@@ -79,8 +79,6 @@ export const TrackListMainContainer = styled.div`
 
 export const TrackListContainer = styled.div`
   width: 650px;
-  -webkit-box-shadow: 5px 5px 50px 0px lightgray;
-  -moz-box-shadow: 5px 5px 50px 0px lightgray;
   box-shadow: 5px 5px 50px 0px lightgray;
   border-radius: 10px;
   flex-direction: column;
