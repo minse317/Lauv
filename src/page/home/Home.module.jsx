@@ -12,7 +12,7 @@ export const LauvImg = styled.img`
 `;
 
 export const WelcomeText = styled.h1`
-  font-family: 'Lilita One', cursive;
+  font-family: 'Abril Fatface', cursive;
   font-size: 150px;
   margin-left: 150px;
   line-height: 300px;
@@ -28,7 +28,8 @@ export const Box = styled.div`
   width: 750px;
   height: 750px;
   border-radius: 59% 41% 59% 41% / 35% 58% 42% 65%;
-  background-color: #1f0049;
+  background-color: #3700ff2a;
+  opacity: 0.6;
   position: absolute;
   right: 0;
   margin-right: 100px;
